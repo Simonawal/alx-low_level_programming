@@ -1,13 +1,25 @@
-#include <unistd.h>
+#include <stdio.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
+  * main - starting (entry) point of the program
+  * printf - write the string to standard output
+  *
+  * Return: returns (0) for success
+  */
+int main(void)
 {
-	return (write(1, &c, 1));
+	char smallcaps = 'a';
+	char bigcaps = 'A';
+
+	while (smallcaps <= 'z')
+	{
+		putchar(smallcaps++);
+	}
+	while (bigcaps <= 'Z')
+	{
+		putchar(bigcaps++);
+	}
+	putchar('\n');
+	return (0);
+
 }
